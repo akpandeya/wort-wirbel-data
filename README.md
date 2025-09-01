@@ -12,36 +12,36 @@ This repository provides structured vocabulary data in JSON format, perfect for:
 - API development for language learning platforms
 - **Automated vocabulary generation from web sources**
 
-## ðŸ“ Structure
+##  Structure
 
 ```
 wort-wirbel-data/
-â”œâ”€â”€ README.md                    # This file
-â”œâ”€â”€ VOCABULARY.md                # Detailed vocabulary documentation
-â”œâ”€â”€ generate_vocabulary.py       # Vocabulary generator script
-â”œâ”€â”€ requirements.txt             # Python dependencies
-â””â”€â”€ data/
-    â””â”€â”€ languages/
-        â””â”€â”€ german/              # German language data
-            â””â”€â”€ words/
-                â”œâ”€â”€ a/           # Words starting with 'a'
-                â”‚   â”œâ”€â”€ auto.json
-                â”‚   â”œâ”€â”€ apfel.json
-                â”‚   â””â”€â”€ ...
-                â”œâ”€â”€ b/           # Words starting with 'b'
-                â”‚   â”œâ”€â”€ buch.json
-                â”‚   â”œâ”€â”€ blau.json
-                â”‚   â””â”€â”€ ...
-                â””â”€â”€ ...          # Through z/
+ README.md                    # This file
+ VOCABULARY.md                # Detailed vocabulary documentation
+ generate_vocabulary.py       # Vocabulary generator script
+ requirements.txt             # Python dependencies
+ data/
+     languages/
+         german/              # German language data
+             words/
+                 a/           # Words starting with 'a'
+                    auto.json
+                    apfel.json
+                    ...
+                 b/           # Words starting with 'b'
+                    buch.json
+                    blau.json
+                    ...
+                 ...          # Through z/
 ```
 
 **Future Language Support**: The structure is designed to easily add other languages:
 ```
 data/languages/
-â”œâ”€â”€ german/words/...
-â”œâ”€â”€ spanish/words/...
-â”œâ”€â”€ french/words/...
-â””â”€â”€ italian/words/...
+ german/words/...
+ spanish/words/...
+ french/words/...
+ italian/words/...
 ```
 
 Each language word is stored as a separate JSON file in the appropriate letter directory.
@@ -83,7 +83,7 @@ python generate_vocabulary.py --help
 - ✅ **Extensible architecture** - easy to add new data sources
 - ✅ **Proper JSON formatting** - includes newlines for GitHub display
 
-## ðŸ“Š Data Format
+## Š Data Format
 
 Each vocabulary entry follows this consistent structure:
 
@@ -107,7 +107,7 @@ Each vocabulary entry follows this consistent structure:
 | `article` | string\|null | German article for nouns (der, die, das) or null for non-nouns |
 | `example_sentence` | string | Simple German sentence demonstrating usage |
 
-## ðŸ”¢ Content Statistics
+## Content Statistics
 
 - **Total Words**: 532 A1-level vocabulary entries
 - **Coverage**: Core German concepts for beginners
@@ -185,7 +185,7 @@ for filename in os.listdir('data/languages/german/words/a'):
         a_words.append(json.load(f))
 ```
 
-## ðŸ“ Content Categories
+## Content Categories
 
 The vocabulary covers essential A1-level topics:
 
@@ -216,7 +216,7 @@ The vocabulary covers essential A1-level topics:
 - ✅ **Automated generation scripts with validation**
 - ✅ **Multi-language structure for future expansion**
 
-## 🌍 Multi-Language Support
+## 🌍 Multi-Language Support
 
 The repository is designed to easily support additional languages:
 
@@ -233,7 +233,7 @@ Languages can be added by:
 2. Adapting the generator script for language-specific rules
 3. Adding language-specific article/grammar handling
 
-## ðŸ“– Documentation
+## Documentation
 
 For detailed vocabulary information and advanced usage, see [VOCABULARY.md](VOCABULARY.md).
 
@@ -241,10 +241,10 @@ For detailed vocabulary information and advanced usage, see [VOCABULARY.md](VOCA
 
 This is a curated dataset for A1-level German vocabulary. If you find errors or have suggestions for improvements, please open an issue.
 
-## ðŸ“„ License
+## License
 
 This data is provided for educational purposes and German language learning. Feel free to use it in your projects to help others learn German!
 
 ---
 
-**Viel Erfolg beim Deutschlernen!** ðŸŽ“
+**Viel Erfolg beim Deutschlernen!**
