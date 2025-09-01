@@ -1,8 +1,8 @@
-﻿# Wort-Wirbel Data ðŸ‡©ðŸ‡ª
+# Wort-Wirbel Data 🇩🇪
 
 A comprehensive collection of **532 A1-level German vocabulary words** organized for easy access, learning, and development of German language applications. **Extensible to support multiple languages!**
 
-## ðŸŽ¯ Overview
+## 🎯 Overview
 
 This repository provides structured vocabulary data in JSON format, perfect for:
 - Language learning applications
@@ -46,7 +46,7 @@ data/languages/
 
 Each language word is stored as a separate JSON file in the appropriate letter directory.
 
-## ðŸ¤– Vocabulary Generator
+## 🤖 Vocabulary Generator
 
 The included `generate_vocabulary.py` script can automatically create new vocabulary entries:
 
@@ -75,13 +75,13 @@ python generate_vocabulary.py --help
 ```
 
 ### Features
-- âœ… **Smart article detection** for German nouns (der/die/das)
-- âœ… **Automatic example sentence generation**
-- âœ… **Duplicate prevention** - won't overwrite existing entries
-- âœ… **Filename sanitization** - handles umlauts (Ã¤â†’ae, Ã¶â†’oe, Ã¼â†’ue, ÃŸâ†’ss)
-- âœ… **A1-level focus** - generates beginner-appropriate vocabulary
-- âœ… **Extensible architecture** - easy to add new data sources
-- âœ… **Proper JSON formatting** - includes newlines for GitHub display
+- ✅ **Smart article detection** for German nouns (der/die/das)
+- ✅ **Automatic example sentence generation**
+- ✅ **Duplicate prevention** - won't overwrite existing entries
+- ✅ **Filename sanitization** - handles umlauts (äâ†’ae, öâ†’oe, üâ†’ue, ßâ†’ss)
+- ✅ **A1-level focus** - generates beginner-appropriate vocabulary
+- ✅ **Extensible architecture** - easy to add new data sources
+- ✅ **Proper JSON formatting** - includes newlines for GitHub display
 
 ## ðŸ“Š Data Format
 
@@ -101,7 +101,7 @@ Each vocabulary entry follows this consistent structure:
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `german` | string | The German word (with proper umlauts: Ã¤, Ã¶, Ã¼, ÃŸ) |
+| `german` | string | The German word (with proper umlauts: ä, ö, ü, ß) |
 | `english` | string | English translation |
 | `part_of_speech` | string | Grammatical category (noun, verb, adjective, etc.) |
 | `article` | string\|null | German article for nouns (der, die, das) or null for non-nouns |
@@ -125,7 +125,7 @@ Each vocabulary entry follows this consistent structure:
 | F | 31 | M | 32 | Z | 16 |
 | G | 24 | N | 23 | - | - |
 
-## ðŸš€ Usage Examples
+## 🚀 Usage Examples
 
 ### Load a single word
 ```bash
@@ -189,11 +189,11 @@ for filename in os.listdir('data/languages/german/words/a'):
 
 The vocabulary covers essential A1-level topics:
 
-- **Greetings & Politeness**: Hallo, Danke, Bitte, TschÃ¼ss
+- **Greetings & Politeness**: Hallo, Danke, Bitte, Tschüss
 - **Family & People**: Familie, Mutter, Vater, Kind, Freund
 - **Numbers**: 1-1000, ordinal numbers
 - **Time**: Days, months, seasons, clock time
-- **Colors**: Rot, Blau, GrÃ¼n, Gelb, etc.
+- **Colors**: Rot, Blau, Grün, Gelb, etc.
 - **Body Parts**: Kopf, Hand, Auge, Nase, etc.
 - **Food & Drink**: Brot, Wasser, Apfel, Kaffee, etc.
 - **Clothing**: Hemd, Hose, Schuh, Jacke, etc.
@@ -202,21 +202,21 @@ The vocabulary covers essential A1-level topics:
 - **Weather**: Sonne, Regen, Schnee, warm, kalt
 - **Animals**: Hund, Katze, Vogel, Fisch, etc.
 - **Common Verbs**: sein, haben, gehen, kommen, etc.
-- **Adjectives**: groÃŸ, klein, schÃ¶n, gut, etc.
+- **Adjectives**: groß, klein, schön, gut, etc.
 
-## âœ… Quality Assurance
+## ✅ Quality Assurance
 
-- âœ… All 532 files validated for correct JSON format
-- âœ… All required fields present in every entry
-- âœ… Proper German special characters (Ã¤, Ã¶, Ã¼, ÃŸ) preserved
-- âœ… Appropriate articles assigned to nouns
-- âœ… Authentic German example sentences
-- âœ… A1-level vocabulary selection verified
-- âœ… Files properly formatted for GitHub display
-- âœ… **Automated generation scripts with validation**
-- âœ… **Multi-language structure for future expansion**
+- ✅ All 532 files validated for correct JSON format
+- ✅ All required fields present in every entry
+- ✅ Proper German special characters (ä, ö, ü, ß) preserved
+- ✅ Appropriate articles assigned to nouns
+- ✅ Authentic German example sentences
+- ✅ A1-level vocabulary selection verified
+- ✅ Files properly formatted for GitHub display
+- ✅ **Automated generation scripts with validation**
+- ✅ **Multi-language structure for future expansion**
 
-## ðŸŒ Multi-Language Support
+## 🌍 Multi-Language Support
 
 The repository is designed to easily support additional languages:
 
@@ -237,7 +237,7 @@ Languages can be added by:
 
 For detailed vocabulary information and advanced usage, see [VOCABULARY.md](VOCABULARY.md).
 
-## ðŸ¤ Contributing
+## 🤝 Contributing
 
 This is a curated dataset for A1-level German vocabulary. If you find errors or have suggestions for improvements, please open an issue.
 
