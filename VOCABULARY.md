@@ -1,25 +1,58 @@
-# Wort-Wirbel Data: A1 German Vocabulary
+﻿# Wort-Wirbel Data: A1 German Vocabulary
 
-This repository contains a comprehensive collection of A1-level German vocabulary words, organized for easy access and learning.
+This repository contains a comprehensive collection of A1-level German vocabulary words, organized for easy access and learning. **Now with multi-language support and automated generation capabilities!**
 
 ## Structure
 
-The vocabulary is organized in a hierarchical directory structure:
+The vocabulary is organized in a language-specific hierarchical directory structure:
 
 ```
-data/words/
-├── a/
-│   ├── auto.json
-│   ├── apfel.json
-│   └── ...
-├── b/
-│   ├── buch.json
-│   ├── blau.json
-│   └── ...
-└── ...
+data/languages/german/words/
+â”œâ”€â”€ a/
+â”‚   â”œâ”€â”€ auto.json
+â”‚   â”œâ”€â”€ apfel.json
+â”‚   â””â”€â”€ ...
+â”œâ”€â”€ b/
+â”‚   â”œâ”€â”€ buch.json
+â”‚   â”œâ”€â”€ blau.json
+â”‚   â””â”€â”€ ...
+â””â”€â”€ ...
 ```
 
 Each word is stored as a separate JSON file in the appropriate letter directory based on the first letter of the German word.
+
+**Multi-Language Ready**: The structure supports future expansion to other languages:
+```
+data/languages/
+â”œâ”€â”€ german/words/...
+â”œâ”€â”€ spanish/words/...
+â”œâ”€â”€ french/words/...
+â””â”€â”€ [other-languages]/words/...
+```
+
+## Vocabulary Generator
+
+The repository includes `generate_vocabulary.py` for automated vocabulary creation:
+
+### Features
+- **Smart German article detection** (der/die/das) using linguistic patterns
+- **Automatic example sentence generation** with proper grammar
+- **Duplicate prevention** - won't overwrite existing entries
+- **Filename sanitization** - converts umlauts for file system compatibility
+- **A1-level focus** - generates beginner-appropriate vocabulary
+- **Web API integration ready** - extensible to fetch from online dictionaries
+
+### Usage
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Generate 10 new entries
+python generate_vocabulary.py
+
+# Generate more entries
+python generate_vocabulary.py --count 25
+```
 
 ## Data Format
 
@@ -37,7 +70,7 @@ Each vocabulary entry contains the following fields:
 
 ### Fields Description
 
-- **german**: The German word (with proper special characters like ä, ö, ü, ß)
+- **german**: The German word (with proper special characters like Ã¤, Ã¶, Ã¼, ÃŸ)
 - **english**: English translation
 - **part_of_speech**: Grammatical category (noun, verb, adjective, etc.)
 - **article**: German article for nouns (der, die, das) or null for non-nouns
@@ -76,27 +109,50 @@ The collection includes **532 A1-level German vocabulary words** covering:
 
 ### Load a single word
 ```bash
-cat data/words/h/hallo.json
+# Windows
+type data\languages\german\words\h\hallo.json
+
+# Unix/Linux/Mac
+cat data/languages/german/words/h/hallo.json
 ```
 
 ### Find all nouns
 ```bash
-grep -r '"part_of_speech": "noun"' data/words/
+# Windows PowerShell
+Get-ChildItem -Path "data\languages\german\words" -Filter "*.json" -Recurse | ForEach-Object { if ((Get-Content $_.FullName | ConvertFrom-Json).part_of_speech -eq "noun") { $_.Name } }
+
+# Unix/Linux/Mac
+grep -r '"part_of_speech": "noun"' data/languages/german/words/
 ```
 
 ### Get all words starting with 'a'
 ```bash
-ls data/words/a/
+# Windows
+dir data\languages\german\words\a\
+
+# Unix/Linux/Mac
+ls data/languages/german/words/a/
 ```
 
 ## Quality Assurance
 
-- ✅ All 532 files validated for correct JSON format
-- ✅ All required fields present in every entry
-- ✅ Proper German special characters preserved
-- ✅ Appropriate articles assigned to nouns
-- ✅ Authentic German example sentences
-- ✅ A1-level vocabulary selection verified
+- âœ… All 532 files validated for correct JSON format
+- âœ… All required fields present in every entry
+- âœ… Proper German special characters preserved
+- âœ… Appropriate articles assigned to nouns
+- âœ… Authentic German example sentences
+- âœ… A1-level vocabulary selection verified
+- âœ… **Automated generation with validation scripts**
+- âœ… **Multi-language structure for extensibility**
+
+## Future Enhancements
+
+The vocabulary generator can be extended to:
+- **Fetch from online German dictionaries** (Dict.cc, DWDS, etc.)
+- **Integrate with translation APIs** (Google Translate, DeepL)
+- **Add pronunciation data** (IPA, audio file links)
+- **Include difficulty ratings** (A1, A2, B1, etc.)
+- **Support other languages** (Spanish, French, Italian)
 
 ## License
 
