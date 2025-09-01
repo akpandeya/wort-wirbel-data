@@ -1,4 +1,4 @@
-﻿# Wort-Wirbel Data: A1 German Vocabulary
+# Wort-Wirbel Data: A1 German Vocabulary
 
 This repository contains a comprehensive collection of A1-level German vocabulary words, organized for easy access and learning. **Now with multi-language support and automated generation capabilities!**
 
@@ -70,7 +70,7 @@ Each vocabulary entry contains the following fields:
 
 ### Fields Description
 
-- **german**: The German word (with proper special characters like Ã¤, Ã¶, Ã¼, ÃŸ)
+- **german**: The German word (with proper special characters like ä, ö, ü, ß)
 - **english**: English translation
 - **part_of_speech**: Grammatical category (noun, verb, adjective, etc.)
 - **article**: German article for nouns (der, die, das) or null for non-nouns
@@ -136,14 +136,14 @@ ls data/languages/german/words/a/
 
 ## Quality Assurance
 
-- âœ… All 532 files validated for correct JSON format
-- âœ… All required fields present in every entry
-- âœ… Proper German special characters preserved
-- âœ… Appropriate articles assigned to nouns
-- âœ… Authentic German example sentences
-- âœ… A1-level vocabulary selection verified
-- âœ… **Automated generation with validation scripts**
-- âœ… **Multi-language structure for extensibility**
+- ✅ All 532 files validated for correct JSON format
+- ✅ All required fields present in every entry
+- ✅ Proper German special characters preserved
+- ✅ Appropriate articles assigned to nouns
+- ✅ Authentic German example sentences
+- ✅ A1-level vocabulary selection verified
+- ✅ **Automated generation with validation scripts**
+- ✅ **Multi-language structure for extensibility**
 
 ## Future Enhancements
 
